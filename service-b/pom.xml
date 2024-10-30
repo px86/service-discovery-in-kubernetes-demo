@@ -43,6 +43,7 @@
 	</dependencies>
 
 	<build>
+                <finalName>service-b</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
