@@ -1,0 +1,4 @@
+#+TITLE: service-discovery-in-kubernetes-demo
+#+AUTHOR: Pushkar Raj <px86@protonmail.com>
+
+A project demonstrating service discovery in kubernetes.
