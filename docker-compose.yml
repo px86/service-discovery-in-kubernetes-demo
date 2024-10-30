@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  service-a:
+    image: service-a:latest
+    container_name: service-a
+    build:
+      context: ./service-a/
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service-b
+    networks:
+      - "app-network"
+
+  service-b:
+    image: service-b:latest
+    container_name: service-b
+    build:
+      context: ./service-b/
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    networks:
+      - "app-network"
+
+networks:
+  app-network:
+    name: service-discovery-app
